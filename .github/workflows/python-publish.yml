@@ -1,0 +1,138 @@
+#importing stuff
+import time, cmd, os, textwrap, sys, random
+from colorama import Fore
+
+screen_width = 100
+
+def start_game():
+ print(Fore.BLUE+"              ■□□□□□□□□□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■□□□□□□□□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■■□□□□□□□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■■■□□□□□□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■■■■□□□□□", end="\r")
+ time.sleep(2)
+ print(Fore.BLUE+"              ■■■■■■□□□□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■■■■■■□□□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■■■■■■■□□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■■■■■■■■□", end="\r")
+ time.sleep(1)
+ print(Fore.BLUE+"              ■■■■■■■■■■", end="\r")
+ time.sleep(1)
+#starting of text adventure
+ print(Fore.MAGENTA,'you wake up in a cold and dark room..')
+ time.sleep(3)
+ print(Fore.MAGENTA,'the room gets darker and colder and you shiver')
+ time.sleep(3)
+ print(Fore.MAGENTA,'you try to break free as you are put down by chains')
+ time.sleep(3)
+ dec1 = input(Fore.LIGHTRED_EX+'What do you do : A.[Call for help] B.[Go God Mode] C.[Wait for something]')
+#if 'Call for help' is chosen
+ if dec1  == "a":
+    time.sleep(3)
+    print(Fore.MAGENTA,'You cry out a silent squeal...')
+    time.sleep(3)
+    print(Fore.MAGENTA,'A well built man who seems to be wearing a suit looking like its from the olden days walks inside a rush')
+    time.sleep(3.5)
+    dec2 = input(Fore.LIGHTRED_EX+'He asks you, your name with anger : A.[Tell the Truth] B.[Joe]')
+    time.sleep(3)
+    #if 'Tell the Truth' is chosen
+    if dec2 == "a":
+     userName = input(Fore.BLUE+"Enter your name: ")
+     print(Fore.MAGENTA,'Iam' ,userName, 'why am i trapped here?')
+     time.sleep(3)
+     print(Fore.MAGENTA,'The man doesnt answer instead ignores you and leaves the dark room')
+     time.sleep(3)
+     print(Fore.MAGENTA,'the room gets colder... your clothes are all ripped with holes so you cant bear the cold.')
+     time.sleep(3.5)
+     print(Fore.MAGENTA,'"Valdo!"someone crys out and you hear it in your mind... you close your eyes and realise you have been dreaming...')
+     time.sleep(4)
+     print(Fore.MAGENTA,'"VALDO!"said a women with long blue hair and a very odd clothing sense')
+     time.sleep(3.5)
+     print(Fore.MAGENTA,'"Have you been fockin dreamin i thou i told you to stop it"she says with a caring but demanding tone')
+     time.sleep(4)
+     print(Fore.MAGENTA,'"I wasnt dreaming honey i just had too many whisky last night"')
+     time.sleep(4)
+     print(Fore.MAGENTA,'"you wer home last nigh don you dare lie to me Valdo"she says by exposing you...')
+     time.sleep(4)
+   
+    #Last Decision part `1`
+    dec3 = input(Fore.LIGHTRED_EX+'"am sorry me lov ": A.[Tell the truth] B.[Fake it]')
+    time.sleep(4)
+    if dec3 == "a":
+      print(Fore.RED,"[Your early access have come to an end if you want to know what happened next you can donate to me https://ko-fi.com/tom4thy]")
+      input('Press enter to exit')
+    elif dec3 == "b":
+        print(Fore.RED,"[Your early access have come to an end if you want to know what happened next you can donate to me https://ko-fi.com/tom4thy]")
+        input('Press enter to exit')
+   
+    #if 'Joe' is chosen
+    elif dec2 == "b":
+     print(Fore.MAGENTA,'"Thats a weird name... whats your full name"')
+     print(Fore.MAGENTA,"JOE MAMA LOOOOOL")
+     time.sleep(2)
+
+
+#if 'God Mode' is chosen
+ if dec1 == "b":
+    print(Fore.MAGENTA,'.', end="\r")
+    time.sleep(1)
+    print(Fore.MAGENTA,'..', end="\r")
+    time.sleep(1)
+    print(Fore.MAGENTA,'...', end="\r")
+    time.sleep(1)
+    print(Fore.MAGENTA,'you dont have enough mana', end="\r")
+    input()
+#if 'Wait for something' is chosen
+ if dec1 == "c":
+    print(Fore.MAGENTA,'you wait.')
+    time.sleep(1)
+    print(Fore.MAGENTA,'you wait..', end="\r")
+    time.sleep(1)
+    print(Fore.MAGENTA,'you wait...', end="\r")
+    time.sleep(1)
+    print(Fore.GREEN,'nothing happens')
+    title_screen_selection()
+
+def donate_menu():
+    print(Fore.GREEN,'##############################################')
+    print(Fore.GREEN,'# you can donate by coping the below link <3 #')
+    print(Fore.GREEN,'#-        https://ko-fi.com/tom4thy         -#')
+    print(Fore.GREEN,'##############################################')
+    title_screen_selection()
+
+def title_screen_selection():
+    option = input("> ").lower()
+    if option == 'donate me':
+        donate_menu()
+    if option == 'start':
+        start_game()
+    if option== 'quit':
+        sys.exit()
+    elif option in ['start', 'help','quit']:
+        print('')
+    elif option == 'support me':
+        donate_menu()
+    elif option == 'start':
+        start_game()
+    elif  option == 'quit':
+        sys.exit()
+
+def title_screen():
+    os.system('cls')
+    print(Fore.GREEN,'<><><><><><><><><><><><><><><><><>')
+    print(Fore.GREEN,'< Valdo the Wizard : Story tells <>')
+    print(Fore.GREEN,'<><><><><><><><><><><><><><><><><>')
+    print(Fore.GREEN,'           - start -                      ')
+    print(Fore.GREEN,'        - support me -                ')
+    print(Fore.GREEN,'           - quit -                      ')
+    title_screen_selection()
+title_screen()
+
+title_screen()
