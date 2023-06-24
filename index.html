@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tom's Server</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #F0F8FF; /* Light Blue */
+      overflow: hidden;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      padding: 20px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 36px;
+      margin: 0;
+      padding: 10px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+      z-index: 0;
+      position: relative; /* Added this line */
+    }
+
+    footer {
+      background-color: #FFF;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Animation */
+    @keyframes backgroundAnimation {
+      0% {
+        background-color: #00A8E8; /* Blue */
+      }
+      25% {
+        background-color: #98D8D8; /* Pale */
+      }
+      50% {
+        background-color: #F8ED62; /* Yellow */
+      }
+      75% {
+        background-color: #D93692; /* Magenta */
+      }
+      100% {
+        background-color: #00A8E8; /* Blue */
+      }
+    }
+
+    body {
+      animation: backgroundAnimation 10s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Tom's website!</h1>
+  </header>
+
+  <main>
+    <!-- Add your content sections here -->
+  </main>
+
+  <footer>
+    <!-- Add your footer content here -->
+  </footer>
+</body>
+</html>
