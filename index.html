@@ -15,7 +15,7 @@
         <meta property="og:image:width" content="1280"/>
         <meta property="og:image:height" content="800"/>
         <meta property="twitter:card" content="summary_large_image"/>
-        <link href="https://fonts.googleapis.com/css2?display=swap&family=Inter:ital,wght@0,400;0,600;1,400;1,600" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?display=swap&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&family=Epilogue:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700" rel="stylesheet" type="text/css"/>
         <style>
             html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
                 margin: 0;
@@ -252,16 +252,28 @@
                 padding: var(--padding-vertical) var(--padding-horizontal);
             }
 
-            #main > .inner > * {
+            #main > .inner > header {
+                margin-bottom: var(--spacing);
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+            }
+
+            #main > .inner > footer {
+                margin-top: var(--spacing);
+                border-bottom-left-radius: inherit;
+                border-bottom-right-radius: inherit;
+            }
+
+            #main > .inner > * > * {
                 margin-top: var(--spacing);
                 margin-bottom: var(--spacing);
             }
 
-            #main > .inner > :first-child {
+            #main > .inner > * > :first-child {
                 margin-top: 0 !important;
             }
 
-            #main > .inner > :last-child {
+            #main > .inner > * > :last-child {
                 margin-bottom: 0 !important;
             }
 
@@ -291,6 +303,34 @@
                 left: 50%;
                 margin-left: -50vw;
                 right: auto;
+            }
+
+            #main > .inner > * > .full {
+                margin-left: calc(-3rem);
+                max-width: calc(100% + 6rem + 0.4725px);
+                width: calc(100% + 6rem + 0.4725px);
+            }
+
+            #main > .inner > * > .full.screen {
+                border-radius: 0 !important;
+                max-width: 100vw;
+                position: relative;
+                width: 100vw;
+                left: 50%;
+                margin-left: -50vw;
+                right: auto;
+            }
+
+            #main > .inner > header > .full:first-child {
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+                margin-top: -3rem !important;
+            }
+
+            #main > .inner > footer > .full:last-child {
+                margin-bottom: -3rem !important;
+                border-bottom-left-radius: inherit;
+                border-bottom-right-radius: inherit;
             }
 
             body.is-loading #main {
@@ -375,6 +415,75 @@
                 margin-top: 1rem;
             }
 
+            #text03 {
+                color: #B0B8D4;
+                font-family: 'Inter', sans-serif;
+                letter-spacing: -0.025rem;
+                width: 100%;
+                font-size: 1.5em;
+                line-height: 1.75;
+                font-weight: 400;
+                text-shadow: 0.088rem 0.088rem 0.125rem #FA4848;
+            }
+
+            #text03 a {
+                text-decoration: underline;
+            }
+
+            #text03 a:hover {
+                text-decoration: none;
+            }
+
+            #text03 span.p:nth-child(n + 2) {
+                margin-top: 1rem;
+            }
+
+            #text04 {
+                color: #B0B8D4;
+                font-family: 'Epilogue', sans-serif;
+                letter-spacing: -0.025rem;
+                width: 100%;
+                font-size: 1.5em;
+                line-height: 1.75;
+                font-weight: 400;
+                text-shadow: 0.088rem 0.088rem 0.125rem transparent;
+            }
+
+            #text04 a {
+                text-decoration: underline;
+            }
+
+            #text04 a:hover {
+                text-decoration: none;
+            }
+
+            #text04 span.p:nth-child(n + 2) {
+                margin-top: 1rem;
+            }
+
+            #text05 {
+                color: #B0B8D4;
+                font-family: 'Epilogue', sans-serif;
+                letter-spacing: 1.3rem;
+                width: calc(100% + 1.3rem);
+                font-size: 1.875em;
+                line-height: 1.625;
+                font-weight: 500;
+                text-shadow: 0.088rem 0.088rem 0.125rem transparent;
+            }
+
+            #text05 a {
+                text-decoration: underline;
+            }
+
+            #text05 a:hover {
+                text-decoration: none;
+            }
+
+            #text05 span.p:nth-child(n + 2) {
+                margin-top: 1rem;
+            }
+
             hr {
                 border: 0;
                 padding: 0;
@@ -394,6 +503,111 @@
                 border-top: solid 1px rgba(255,255,255,0.078);
                 height: 1px;
                 margin-top: -0.5px;
+            }
+
+            .buttons {
+                cursor: default;
+                display: flex;
+                justify-content: var(--flex-alignment);
+                letter-spacing: 0;
+                padding: 0;
+            }
+
+            .buttons li {
+                max-width: 100%;
+            }
+
+            .buttons li a {
+                align-items: center;
+                justify-content: center;
+                max-width: 100%;
+                text-align: center;
+                text-decoration: none;
+                vertical-align: middle;
+                white-space: nowrap;
+            }
+
+            #buttons01 {
+                gap: 0.75rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            #buttons01 li a {
+                display: inline-block;
+                width: 23.625rem;
+                height: 2.375rem;
+                line-height: calc(2.375rem - 4px);
+                padding: 0 0.5rem;
+                vertical-align: middle;
+                font-family: 'Inter', sans-serif;
+                letter-spacing: 1.1rem;
+                padding-left: calc(1.1rem + 0.5rem);
+                font-size: 1.25em;
+                font-weight: 500;
+                border-radius: 2.5rem;
+                direction: var(--site-language-direction);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+            }
+
+            #buttons01 .button {
+                color: #FFFFFF;
+                border: solid 2px #000000;
+            }
+
+            #buttons01 .button:hover {
+                border-color: #852424 !important;
+                color: #852424 !important;
+            }
+
+            #buttons02 {
+                gap: 0.75rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            #buttons02 li a {
+                display: inline-block;
+                width: 23.625rem;
+                height: 2.375rem;
+                line-height: calc(2.375rem - 4px);
+                padding: 0 0.5rem;
+                vertical-align: middle;
+                font-family: 'Inter', sans-serif;
+                letter-spacing: 1.1rem;
+                padding-left: calc(1.1rem + 0.5rem);
+                font-size: 1.25em;
+                font-weight: 500;
+                border-radius: 2.5rem;
+                direction: var(--site-language-direction);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+            }
+
+            #buttons02 .button {
+                color: #FFFFFF;
+                border: solid 2px #000000;
+            }
+
+            #buttons02 .button:hover {
+                border-color: #852424 !important;
+                color: #852424 !important;
+            }
+
+            #buttons02 .n01 {
+                color: #944E4E;
+                border: solid 2px #915757;
+            }
+
+            #header {
+                margin-bottom: 12rem !important;
+            }
+
+            #footer {
+                margin-top: 12rem !important;
             }
 
             .container {
@@ -586,6 +800,157 @@
                 width: 100%;
             }
 
+            #container02 {
+                --alignment: left;
+                --flex-alignment: flex-start;
+                --indent-left: 1;
+                --indent-right: 0;
+                display: flex;
+                width: 100%;
+                min-height: 37rem;
+                align-items: center;
+                justify-content: center;
+                background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cfilter%20id%3D%22noise%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220.0546875%200%200%200%200%200%200.0546875%200%200%200%200%200%200.0703125%200%200%200%200%200%200.34765625%200%22%20%2F%3E%20%3C%2Ffilter%3E%20%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(45deg, #211D1A 35%, #423627 100%);
+                background-size: 512px, cover;
+                background-position: center, 0% 0%;
+                background-repeat: repeat, repeat;
+                box-shadow: 0rem 1rem 6.125rem 0rem rgba(24,19,38,0.42);
+                border-radius: 3rem;
+            }
+
+            #container02:not(:first-child) {
+                margin-top: 3rem !important;
+            }
+
+            #container02:not(:last-child) {
+                margin-bottom: 3rem !important;
+            }
+
+            #container02 > .wrapper > .inner {
+                --gutters: 4rem;
+                --padding-horizontal: 3rem;
+                --padding-vertical: 4.5rem;
+                --spacing: 1.5rem;
+                padding: var(--padding-vertical) var(--padding-horizontal);
+            }
+
+            #container02 > .wrapper {
+                max-width: var(--width);
+                width: 100%;
+            }
+
+            #container02.default > .wrapper > .inner > * {
+                margin-bottom: var(--spacing);
+                margin-top: var(--spacing);
+            }
+
+            #container02.default > .wrapper > .inner > *:first-child {
+                margin-top: 0 !important;
+            }
+
+            #container02.default > .wrapper > .inner > *:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            #container02.columns > .wrapper > .inner {
+                flex-wrap: wrap;
+                display: flex;
+                align-items: center;
+            }
+
+            #container02.columns > .wrapper > .inner > * {
+                flex-grow: 0;
+                flex-shrink: 0;
+                max-width: 100%;
+                text-align: var(--alignment);
+                padding: 0 0 0 var(--gutters);
+            }
+
+            #container02.columns > .wrapper > .inner > * > * {
+                margin-bottom: var(--spacing);
+                margin-top: var(--spacing);
+            }
+
+            #container02.columns > .wrapper > .inner > * > *:first-child {
+                margin-top: 0 !important;
+            }
+
+            #container02.columns > .wrapper > .inner > * > *:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            #container02.columns > .wrapper > .inner > *:first-child {
+                margin-left: calc(var(--gutters) * -1);
+            }
+
+            #container02.default > .wrapper > .inner > .full {
+                margin-left: calc(var(--padding-horizontal) * -1);
+                max-width: none !important;
+                width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+            }
+
+            #container02.default > .wrapper > .inner > .full:first-child {
+                margin-top: calc(var(--padding-vertical) * -1) !important;
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+            }
+
+            #container02.default > .wrapper > .inner > .full:last-child {
+                margin-bottom: calc(var(--padding-vertical) * -1) !important;
+                border-bottom-left-radius: inherit;
+                border-bottom-right-radius: inherit;
+            }
+
+            #container02.columns > .wrapper > .inner > div > .full {
+                margin-left: calc(var(--gutters) * -0.5);
+                max-width: none !important;
+                width: calc(100% + var(--gutters) + 0.4725px);
+            }
+
+            #container02.columns > .wrapper > .inner > div:first-child > .full {
+                margin-left: calc(var(--padding-horizontal) * -1);
+                width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+            }
+
+            #container02.columns > .wrapper > .inner > div:last-child > .full {
+                width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+            }
+
+            #container02.columns > .wrapper > .inner > div > .full:first-child {
+                margin-top: calc(var(--padding-vertical) * -1) !important;
+            }
+
+            #container02.columns > .wrapper > .inner > div > .full:last-child {
+                margin-bottom: calc(var(--padding-vertical) * -1) !important;
+            }
+
+            #container02.columns > .wrapper > .inner > .full {
+                align-self: stretch;
+                min-height: 37rem;
+            }
+
+            #container02.columns > .wrapper > .inner > .full:first-child {
+                border-bottom-left-radius: inherit;
+                border-top-left-radius: inherit;
+            }
+
+            #container02.columns > .wrapper > .inner > .full:last-child {
+                border-bottom-right-radius: inherit;
+                border-top-right-radius: inherit;
+            }
+
+            #container02.columns > .wrapper > .inner > .full > .full:first-child:last-child {
+                border-radius: inherit;
+                height: calc(100% + (var(--padding-vertical) * 2));
+            }
+
+            #container02.columns > .wrapper > .inner > .full > .full:first-child:last-child > * {
+                border-radius: inherit;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+            }
+
             .icons {
                 display: flex;
                 flex-wrap: wrap;
@@ -644,11 +1009,11 @@
             }
 
             #icons01 a svg {
-                fill: rgba(0,0,0,0.22);
+                fill: #2AB59C;
             }
 
             #icons01 a:hover svg {
-                fill: rgba(0,0,0,0.451) !important;
+                fill: rgba(158,76,76,0.91) !important;
             }
 
             #icons01 li a + svg {
@@ -743,7 +1108,7 @@
             }
 
             #credits span {
-                color: rgba(0,0,0,0.498);
+                color: rgba(176,184,212,0.498);
                 margin-top: 1.5rem !important;
             }
 
@@ -782,6 +1147,24 @@
                     --spacing: 2rem;
                 }
 
+                #main > .inner > * > .full {
+                    margin-left: calc(-1.25rem);
+                    max-width: calc(100% + 2.5rem + 0.4725px);
+                    width: calc(100% + 2.5rem + 0.4725px);
+                }
+
+                #main > .inner > * > .full.screen {
+                    margin-left: -50vw;
+                }
+
+                #main > .inner > header > .full:first-child {
+                    margin-top: -2.75rem !important;
+                }
+
+                #main > .inner > footer > .full:last-child {
+                    margin-bottom: -2.75rem !important;
+                }
+
                 #text02 {
                     letter-spacing: -0.175rem;
                     width: 100%;
@@ -796,8 +1179,57 @@
                     line-height: 1.75;
                 }
 
+                #text03 {
+                    letter-spacing: -0.021875rem;
+                    width: 100%;
+                    font-size: 1.5em;
+                    line-height: 1.75;
+                }
+
+                #text04 {
+                    letter-spacing: -0.021875rem;
+                    width: 100%;
+                    font-size: 1.5em;
+                    line-height: 1.75;
+                }
+
+                #text05 {
+                    letter-spacing: 1.1375rem;
+                    width: calc(100% + 1.1375rem);
+                    font-size: 1.875em;
+                    line-height: 1.625;
+                }
+
                 #divider01:before {
                     width: 100rem;
+                }
+
+                #buttons01 {
+                    gap: 0.75rem;
+                }
+
+                #buttons01 li a {
+                    letter-spacing: 1.1rem;
+                    padding-left: calc(1.1rem + 0.5rem);
+                    font-size: 1.25em;
+                }
+
+                #buttons02 {
+                    gap: 0.75rem;
+                }
+
+                #buttons02 li a {
+                    letter-spacing: 1.1rem;
+                    padding-left: calc(1.1rem + 0.5rem);
+                    font-size: 1.25em;
+                }
+
+                #header {
+                    margin-bottom: 2.625rem !important;
+                }
+
+                #footer {
+                    margin-top: 2.625rem !important;
                 }
 
                 #container01 {
@@ -907,6 +1339,113 @@
                     width: auto;
                 }
 
+                #container02 {
+                    min-height: 27.75rem;
+                }
+
+                #container02:not(:first-child) {
+                    margin-top: 2.25rem !important;
+                }
+
+                #container02:not(:last-child) {
+                    margin-bottom: 2.25rem !important;
+                }
+
+                #container02 > .wrapper > .inner {
+                    --gutters: 4rem;
+                    --padding-horizontal: 2rem;
+                    --padding-vertical: 3.5rem;
+                    --spacing: 1.5rem;
+                }
+
+                #container02.columns > .wrapper > .inner {
+                    flex-direction: column !important;
+                    flex-wrap: nowrap !important;
+                }
+
+                #container02.columns > .wrapper > .inner > span {
+                    height: 0;
+                    margin-top: calc(var(--gutters) * -1);
+                    pointer-events: none;
+                    visibility: hidden;
+                }
+
+                #container02.columns > .wrapper > .inner > *:first-child {
+                    margin-left: 0 !important;
+                    padding-top: 0 !important;
+                }
+
+                #container02.columns > .wrapper > .inner > * {
+                    padding: calc(var(--gutters) * 0.5) 0 !important;
+                }
+
+                #container02.columns > .wrapper > .inner > *:last-child {
+                    padding-bottom: 0 !important;
+                }
+
+                #container02.columns > .wrapper > .inner > div > .full {
+                    margin-left: calc(var(--padding-horizontal) * -1);
+                    width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+                }
+
+                #container02.columns > .wrapper > .inner > div:first-of-type > .full {
+                    margin-left: calc(var(--padding-horizontal) * -1);
+                    width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+                }
+
+                #container02.columns > .wrapper > .inner > div:last-of-type > .full {
+                    margin-left: calc(var(--padding-horizontal) * -1);
+                    width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+                }
+
+                #container02.columns > .wrapper > .inner > div > .full:first-child {
+                    margin-top: calc(var(--gutters) * -0.5) !important;
+                }
+
+                #container02.columns > .wrapper > .inner > div > .full:last-child {
+                    margin-bottom: calc(var(--gutters) * -0.5) !important;
+                }
+
+                #container02.columns > .wrapper > .inner > div:first-of-type > .full:first-child {
+                    margin-top: calc(var(--padding-vertical) * -1) !important;
+                }
+
+                #container02.columns > .wrapper > .inner > div:last-of-type > .full:last-child {
+                    margin-bottom: calc(var(--padding-vertical) * -1) !important;
+                }
+
+                #container02.columns > .wrapper > .inner > div:first-of-type, #container02.columns > .wrapper > .inner > div:first-of-type > .full:first-child {
+                    border-top-left-radius: inherit;
+                    border-top-right-radius: inherit;
+                }
+
+                #container02.columns > .wrapper > .inner > div:last-of-type, #container02.columns > .wrapper > .inner > div:last-of-type > .full:last-child {
+                    border-bottom-left-radius: inherit;
+                    border-bottom-right-radius: inherit;
+                }
+
+                #container02.columns > .wrapper > .inner > div:first-of-type, #container02.columns > .wrapper > .inner > div:first-of-type > .full:last-child {
+                    border-bottom-left-radius: 0 !important;
+                }
+
+                #container02.columns > .wrapper > .inner > div:last-of-type, #container02.columns > .wrapper > .inner > div:last-of-type > .full:first-child {
+                    border-top-right-radius: 0 !important;
+                }
+
+                #container02.columns > .wrapper > .inner > .full {
+                    min-height: 27.75rem;
+                }
+
+                #container02.columns > .wrapper > .inner > .full > .full:first-child:last-child {
+                    height: auto;
+                }
+
+                #container02.columns > .wrapper > .inner > .full > .full:first-child:last-child > * {
+                    height: auto;
+                    position: relative;
+                    width: auto;
+                }
+
                 #icons01 {
                     font-size: 1.875em;
                     gap: 1.375rem;
@@ -918,7 +1457,31 @@
                     --spacing: 1.75rem;
                 }
 
+                #buttons01 {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+
+                #buttons01 li a {
+                    max-width: 32rem;
+                    width: 100%;
+                }
+
+                #buttons02 {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+
+                #buttons02 li a {
+                    max-width: 32rem;
+                    width: 100%;
+                }
+
                 #container01 > .wrapper > .inner {
+                    --spacing: 1.3125rem;
+                }
+
+                #container02 > .wrapper > .inner {
                     --spacing: 1.3125rem;
                 }
             }
@@ -930,12 +1493,50 @@
                     --spacing: 1.5rem;
                 }
 
+                #main > .inner > * > .full {
+                    margin-left: calc(-0.9375rem);
+                    max-width: calc(100% + 1.875rem + 0.4725px);
+                    width: calc(100% + 1.875rem + 0.4725px);
+                }
+
+                #main > .inner > * > .full.screen {
+                    margin-left: -50vw;
+                }
+
+                #main > .inner > header > .full:first-child {
+                    margin-top: -2.0625rem !important;
+                }
+
+                #main > .inner > footer > .full:last-child {
+                    margin-bottom: -2.0625rem !important;
+                }
+
                 #text02 {
                     font-size: 3em;
                 }
 
                 #text01 {
                     font-size: 1em;
+                }
+
+                #text03 {
+                    font-size: 1.5em;
+                }
+
+                #text04 {
+                    font-size: 1.5em;
+                }
+
+                #text05 {
+                    font-size: 1.5em;
+                }
+
+                #buttons01 {
+                    gap: 0.5625rem;
+                }
+
+                #buttons02 {
+                    gap: 0.5625rem;
                 }
 
                 #container01 > .wrapper > .inner {
@@ -951,6 +1552,21 @@
 
                 #container01.columns > .wrapper > .inner > .full {
                     min-height: 10rem;
+                }
+
+                #container02 > .wrapper > .inner {
+                    --gutters: 3rem;
+                    --padding-horizontal: 1.5rem;
+                    --padding-vertical: 2.625rem;
+                    --spacing: 1.125rem;
+                }
+
+                #container02 {
+                    min-height: 18.5rem;
+                }
+
+                #container02.columns > .wrapper > .inner > .full {
+                    min-height: 18.5rem;
                 }
 
                 #icons01 {
@@ -988,36 +1604,84 @@
                 <path d="M20,11.9c-4.5,0-8.1,3.7-8.1,8.1s3.7,8.1,8.1,8.1s8.1-3.7,8.1-8.1S24.5,11.9,20,11.9z M20,25.2c-2.9,0-5.2-2.3-5.2-5.2 s2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2S22.9,25.2,20,25.2z"/>
                 <path d="M30.6,11.6c0,1-0.8,1.9-1.9,1.9c-1,0-1.9-0.8-1.9-1.9s0.8-1.9,1.9-1.9C29.8,9.7,30.6,10.5,30.6,11.6z"/>
             </symbol>
+            <symbol id="icon-59c45c646c93a770c2b114cf72c44f8e" viewBox="0 0 40 40">
+                <path d="M32.4,32.6h-5.1v-5.1h5.1V32.6z M26.2,32.6h-5.7v-5.1h5.7V32.6z M32.4,26.3h-5.1v-5.7h5.1V26.3z M26.2,26.3h-5.7v-5.7h5.7 V26.3z M32.4,19.6h-5.1v-5.1h5.1V19.6z M19.4,32.6h-5.7v-5.1h5.7V32.6z M26.2,19.6h-5.7v-5.1h5.7V19.6z M12.6,32.6H7.6v-5.1h5.1 V32.6z M19.4,26.3h-5.7v-5.7h5.7V26.3z M25.7,11.1V6c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.2-0.2,0.4-0.2h1.1c0.2,0,0.3,0.1,0.4,0.2 c0.1,0.1,0.2,0.2,0.2,0.4v5.1c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.2,0.2-0.4,0.2h-1.1c-0.2,0-0.3-0.1-0.4-0.2 C25.7,11.4,25.7,11.2,25.7,11.1z M12.6,26.3H7.6v-5.7h5.1V26.3z M19.4,19.6h-5.7v-5.1h5.7V19.6z M12.6,19.6H7.6v-5.1h5.1V19.6z M12.1,11.1V6c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.2-0.2,0.4-0.2h1.1c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.2,0.2,0.4v5.1 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.2,0.2-0.4,0.2h-1.1c-0.2,0-0.3-0.1-0.4-0.2C12.1,11.4,12.1,11.2,12.1,11.1z M5.3,9.9v22.6 c0,0.6,0.2,1.1,0.7,1.6c0.4,0.4,1,0.7,1.6,0.7h24.9c0.6,0,1.1-0.2,1.6-0.7c0.4-0.4,0.7-1,0.7-1.6V9.9c0-0.6-0.2-1.1-0.7-1.6 c-0.4-0.4-1-0.7-1.6-0.7h-2.3V6c0-0.8-0.3-1.4-0.8-2s-1.2-0.8-2-0.8h-1.1c-0.8,0-1.4,0.3-2,0.8c-0.6,0.6-0.8,1.2-0.8,2v1.7h-6.8V6 c0-0.8-0.3-1.4-0.8-2s-1.2-0.8-2-0.8h-1.1c-0.8,0-1.4,0.3-2,0.8c-0.6,0.6-0.8,1.2-0.8,2v1.7H7.6C6.9,7.7,6.4,7.9,6,8.3 C5.5,8.8,5.3,9.3,5.3,9.9z"/>
+            </symbol>
         </svg>
         <div id="wrapper">
             <div id="main">
                 <div class="inner">
-                    <div id="container01" class="container default">
-                        <div class="wrapper">
-                            <div class="inner">
-                                <h1 id="text02">
-                                    <code>tom&#39;s void</code>
-                                </h1>
-                                <p id="text01">Hello welcome. this is a place where i just hide in share some thoughts i guess. Page is still experimental so yeah... feel free to look around ig</p>
-                                <hr id="divider01">
+                    <header id="header"></header>
+                    <section id="home-section">
+                        <div id="container01" class="container default">
+                            <div class="wrapper">
+                                <div class="inner">
+                                    <h1 id="text02">
+                                        <code>tom&#39;s void</code>
+                                    </h1>
+                                    <p id="text01">Hello welcome. this is a place where i just hide in share some thoughts i guess. Page is still experimental so yeah... feel free to look around ig</p>
+                                    <hr id="divider01">
+                                    <ul id="buttons01" class="buttons">
+                                        <li>
+                                            <a href="#about" class="button n01">about me</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <ul id="icons01" class="icons">
-                        <li>
-                            <a class="n01" href="https://www.instagram.com/tom4thy/" aria-label="Instagram">
-                                <svg>
-                                    <use xlink:href="#icon-85976685de3e4af37529a1ce5d57d2a7"></use>
-                                </svg>
-                                <span class="label">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div id="credits" class="icc-credits">
-                        <span>
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Made with Love ❤️</a>
-                        </span>
-                    </div>
+                        <ul id="icons01" class="icons">
+                            <li>
+                                <a class="n01" href="https://www.instagram.com/tom4thy/" aria-label="Instagram">
+                                    <svg>
+                                        <use xlink:href="#icon-85976685de3e4af37529a1ce5d57d2a7"></use>
+                                    </svg>
+                                    <span class="label">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="n02" href="#birthday" aria-label="Calendar">
+                                    <svg>
+                                        <use xlink:href="#icon-59c45c646c93a770c2b114cf72c44f8e"></use>
+                                    </svg>
+                                    <span class="label">Calendar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="about-section">
+                        <h1 id="text03">
+                            <span style="color: #5865F2">
+                                <strong>
+                                    <code>Hello so you&#39;d like to know about me?</code>
+                                </strong>
+                            </span>
+                        </h1>
+                        <div id="container02" class="container default">
+                            <div class="wrapper">
+                                <div class="inner">
+                                    <p id="text04">
+                                        <span class="p">Hello my name is Tom, well yeah you prob know that by opening this website. I&#39;m a high school student who just finished his exams and currently has nothing to do. Im not sure what to add here.</span>
+                                        <span class="p">I&#39;m 17, i like to code a bit thats why i made this little page for me and the curious people who clicked the link. I play alot of games. mostly minecraft...</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <ul id="buttons02" class="buttons">
+                            <li>
+                                <a href="#home" class="button n01">go back</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="birthday-section">
+                        <h2 id="text05">August 4th :)</h2>
+                    </section>
+                    <footer id="footer">
+                        <div id="credits" class="icc-credits">
+                            <span>
+                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Made with love ❤️</a>
+                            </span>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
@@ -1273,7 +1937,336 @@
                     }, 100);
                 };
                 on('load', loadHandler);
-                loadElements(document.body);
+                (function() {
+                    var initialSection, initialScrollPoint, initialId, header, footer, name, hideHeader, hideFooter, disableAutoScroll, h, e, ee, k, locked = false, scrollPointParent = function(target) {
+                        while (target) {
+                            if (target.parentElement && target.parentElement.tagName == 'SECTION')
+                                break;
+                            target = target.parentElement;
+                        }
+                        return target;
+                    }, scrollPointSpeed = function(scrollPoint) {
+                        let x = parseInt(scrollPoint.dataset.scrollSpeed);
+                        switch (x) {
+                        case 5:
+                            return 250;
+                        case 4:
+                            return 500;
+                        case 3:
+                            return 750;
+                        case 2:
+                            return 1000;
+                        case 1:
+                            return 1250;
+                        default:
+                            break;
+                        }
+                        return 750;
+                    }, doNextScrollPoint = function(event) {
+                        var e, target, id;
+                        event.preventDefault();
+                        event.stopPropagation();
+                        e = scrollPointParent(event.target);
+                        if (!e)
+                            return;
+                        while (e && e.nextElementSibling) {
+                            e = e.nextElementSibling;
+                            if (e.dataset.scrollId) {
+                                target = e;
+                                id = e.dataset.scrollId;
+                                break;
+                            }
+                        }
+                        if (!target || !id)
+                            return;
+                        if (target.dataset.scrollInvisible == '1')
+                            scrollToElement(target, 'smooth', scrollPointSpeed(target));
+                        else
+                            location.href = '#' + id;
+                    }, doPreviousScrollPoint = function(e) {
+                        var e, target, id;
+                        event.preventDefault();
+                        event.stopPropagation();
+                        e = scrollPointParent(event.target);
+                        if (!e)
+                            return;
+                        while (e && e.previousElementSibling) {
+                            e = e.previousElementSibling;
+                            if (e.dataset.scrollId) {
+                                target = e;
+                                id = e.dataset.scrollId;
+                                break;
+                            }
+                        }
+                        if (!target || !id)
+                            return;
+                        if (target.dataset.scrollInvisible == '1')
+                            scrollToElement(target, 'smooth', scrollPointSpeed(target));
+                        else
+                            location.href = '#' + id;
+                    }, doFirstScrollPoint = function(e) {
+                        var e, target, id;
+                        event.preventDefault();
+                        event.stopPropagation();
+                        e = scrollPointParent(event.target);
+                        if (!e)
+                            return;
+                        while (e && e.previousElementSibling) {
+                            e = e.previousElementSibling;
+                            if (e.dataset.scrollId) {
+                                target = e;
+                                id = e.dataset.scrollId;
+                            }
+                        }
+                        if (!target || !id)
+                            return;
+                        if (target.dataset.scrollInvisible == '1')
+                            scrollToElement(target, 'smooth', scrollPointSpeed(target));
+                        else
+                            location.href = '#' + id;
+                    }, doLastScrollPoint = function(e) {
+                        var e, target, id;
+                        event.preventDefault();
+                        event.stopPropagation();
+                        e = scrollPointParent(event.target);
+                        if (!e)
+                            return;
+                        while (e && e.nextElementSibling) {
+                            e = e.nextElementSibling;
+                            if (e.dataset.scrollId) {
+                                target = e;
+                                id = e.dataset.scrollId;
+                            }
+                        }
+                        if (!target || !id)
+                            return;
+                        if (target.dataset.scrollInvisible == '1')
+                            scrollToElement(target, 'smooth', scrollPointSpeed(target));
+                        else
+                            location.href = '#' + id;
+                    }, doNextSection = function() {
+                        var section;
+                        section = $('#main > .inner > section.active').nextElementSibling;
+                        if (!section || section.tagName != 'SECTION')
+                            return;
+                        location.href = '#' + section.id.replace(/-section$/, '');
+                    }, doPreviousSection = function() {
+                        var section;
+                        section = $('#main > .inner > section.active').previousElementSibling;
+                        if (!section || section.tagName != 'SECTION')
+                            return;
+                        location.href = '#' + (section.matches(':first-child') ? '' : section.id.replace(/-section$/, ''));
+                    }, doFirstSection = function() {
+                        var section;
+                        section = $('#main > .inner > section:first-of-type');
+                        if (!section || section.tagName != 'SECTION')
+                            return;
+                        location.href = '#' + section.id.replace(/-section$/, '');
+                    }, doLastSection = function() {
+                        var section;
+                        section = $('#main > .inner > section:last-of-type');
+                        if (!section || section.tagName != 'SECTION')
+                            return;
+                        location.href = '#' + section.id.replace(/-section$/, '');
+                    }, resetSectionChangeElements = function(section) {
+                        var ee, e, x;
+                        ee = section.querySelectorAll('[data-reset-on-section-change="1"]');
+                        for (e of ee) {
+                            x = e ? e.tagName : null;
+                            switch (x) {
+                            case 'FORM':
+                                e.reset();
+                                break;
+                            default:
+                                break;
+                            }
+                        }
+                    }, activateSection = function(section, scrollPoint) {
+                        var sectionHeight, currentSection, currentSectionHeight, name, hideHeader, hideFooter, disableAutoScroll, ee, k;
+                        if (!section.classList.contains('inactive')) {
+                            name = (section ? section.id.replace(/-section$/, '') : null);
+                            disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll'in sections[name]) && sections[name].disableAutoScroll) : false;
+                            if (scrollPoint)
+                                scrollToElement(scrollPoint, 'smooth', scrollPointSpeed(scrollPoint));
+                            else if (!disableAutoScroll)
+                                scrollToElement(null);
+                            return false;
+                        } else {
+                            locked = true;
+                            if (location.hash == '#home')
+                                history.replaceState(null, null, '#');
+                            name = (section ? section.id.replace(/-section$/, '') : null);
+                            hideHeader = name ? ((name in sections) && ('hideHeader'in sections[name]) && sections[name].hideHeader) : false;
+                            hideFooter = name ? ((name in sections) && ('hideFooter'in sections[name]) && sections[name].hideFooter) : false;
+                            disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll'in sections[name]) && sections[name].disableAutoScroll) : false;
+                            if (header && hideHeader) {
+                                header.classList.add('hidden');
+                                header.style.display = 'none';
+                            }
+                            if (footer && hideFooter) {
+                                footer.classList.add('hidden');
+                                footer.style.display = 'none';
+                            }
+                            currentSection = $('#main > .inner > section:not(.inactive)');
+                            currentSection.classList.add('inactive');
+                            currentSection.classList.remove('active');
+                            currentSection.style.display = 'none';
+                            unloadElements(currentSection);
+                            resetSectionChangeElements(currentSection);
+                            if (header && !hideHeader) {
+                                header.style.display = '';
+                                header.classList.remove('hidden');
+                            }
+                            if (footer && !hideFooter) {
+                                footer.style.display = '';
+                                footer.classList.remove('hidden');
+                            }
+                            section.classList.remove('inactive');
+                            section.classList.add('active');
+                            section.style.display = '';
+                            trigger('resize');
+                            loadElements(section);
+                            if (scrollPoint)
+                                scrollToElement(scrollPoint, 'instant');
+                            else if (!disableAutoScroll)
+                                scrollToElement(null, 'instant');
+                            locked = false;
+                        }
+                    }, sections = {};
+                    window._nextScrollPoint = doNextScrollPoint;
+                    window._previousScrollPoint = doPreviousScrollPoint;
+                    window._firstScrollPoint = doFirstScrollPoint;
+                    window._lastScrollPoint = doLastScrollPoint;
+                    window._nextSection = doNextSection;
+                    window._previousSection = doPreviousSection;
+                    window._firstSection = doFirstSection;
+                    window._lastSection = doLastSection;
+                    window._scrollToTop = function() {
+                        var section, id;
+                        scrollToElement(null);
+                        if (!!(section = $('section.active'))) {
+                            id = section.id.replace(/-section$/, '');
+                            if (id == 'home')
+                                id = '';
+                            history.pushState(null, null, '#' + id);
+                        }
+                    }
+                    ;
+                    if ('scrollRestoration'in history)
+                        history.scrollRestoration = 'manual';
+                    header = $('#header');
+                    footer = $('#footer');
+                    h = thisHash();
+                    if (h && !h.match(/^[a-zA-Z0-9\-]+$/))
+                        h = null;
+                    if (e = $('[data-scroll-id="' + h + '"]')) {
+                        initialScrollPoint = e;
+                        initialSection = initialScrollPoint.parentElement;
+                        initialId = initialSection.id;
+                    } else if (e = $('#' + (h ? h : 'home') + '-section')) {
+                        initialScrollPoint = null;
+                        initialSection = e;
+                        initialId = initialSection.id;
+                    }
+                    if (!initialSection) {
+                        initialScrollPoint = null;
+                        initialSection = $('#' + 'home' + '-section');
+                        initialId = initialSection.id;
+                        history.replaceState(undefined, undefined, '#');
+                    }
+                    name = (h ? h : 'home');
+                    hideHeader = name ? ((name in sections) && ('hideHeader'in sections[name]) && sections[name].hideHeader) : false;
+                    hideFooter = name ? ((name in sections) && ('hideFooter'in sections[name]) && sections[name].hideFooter) : false;
+                    disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll'in sections[name]) && sections[name].disableAutoScroll) : false;
+                    if (header && hideHeader) {
+                        header.classList.add('hidden');
+                        header.style.display = 'none';
+                    }
+                    if (footer && hideFooter) {
+                        footer.classList.add('hidden');
+                        footer.style.display = 'none';
+                    }
+                    ee = $$('#main > .inner > section:not([id="' + initialId + '"])');
+                    for (k = 0; k < ee.length; k++) {
+                        ee[k].className = 'inactive';
+                        ee[k].style.display = 'none';
+                    }
+                    initialSection.classList.add('active');
+                    loadElements(initialSection);
+                    if (header)
+                        loadElements(header);
+                    if (footer)
+                        loadElements(footer);
+                    if (!disableAutoScroll)
+                        scrollToElement(null, 'instant');
+                    on('load', function() {
+                        if (initialScrollPoint)
+                            scrollToElement(initialScrollPoint, 'instant');
+                    });
+                    on('hashchange', function(event) {
+                        var section, scrollPoint, h, e;
+                        if (locked)
+                            return false;
+                        h = thisHash();
+                        if (h && !h.match(/^[a-zA-Z0-9\-]+$/))
+                            return false;
+                        if (e = $('[data-scroll-id="' + h + '"]')) {
+                            scrollPoint = e;
+                            section = scrollPoint.parentElement;
+                        } else if (e = $('#' + (h ? h : 'home') + '-section')) {
+                            scrollPoint = null;
+                            section = e;
+                        } else {
+                            scrollPoint = null;
+                            section = $('#' + 'home' + '-section');
+                            history.replaceState(undefined, undefined, '#');
+                        }
+                        if (!section)
+                            return false;
+                        activateSection(section, scrollPoint);
+                        return false;
+                    });
+                    on('click', function(event) {
+                        var t = event.target, tagName = t.tagName.toUpperCase(), scrollPoint, section;
+                        switch (tagName) {
+                        case 'IMG':
+                        case 'SVG':
+                        case 'USE':
+                        case 'U':
+                        case 'STRONG':
+                        case 'EM':
+                        case 'CODE':
+                        case 'S':
+                        case 'MARK':
+                        case 'SPAN':
+                            while (!!(t = t.parentElement))
+                                if (t.tagName == 'A')
+                                    break;
+                            if (!t)
+                                return;
+                            break;
+                        default:
+                            break;
+                        }
+                        if (t.tagName == 'A' && t.getAttribute('href').substr(0, 1) == '#') {
+                            if (!!(scrollPoint = $('[data-scroll-id="' + t.hash.substr(1) + '"][data-scroll-invisible="1"]'))) {
+                                event.preventDefault();
+                                section = scrollPoint.parentElement;
+                                if (section.classList.contains('inactive')) {
+                                    history.pushState(null, null, '#' + section.id.replace(/-section$/, ''));
+                                    activateSection(section, scrollPoint);
+                                } else {
+                                    scrollToElement(scrollPoint, 'smooth', scrollPointSpeed(scrollPoint));
+                                }
+                            } else if (t.hash == window.location.hash) {
+                                event.preventDefault();
+                                history.replaceState(undefined, undefined, '#');
+                                location.replace(t.hash);
+                            }
+                        }
+                    });
+                }
+                )();
                 var style, sheet, rule;
                 style = document.createElement('style');
                 style.appendChild(document.createTextNode(''));
@@ -1816,6 +2809,14 @@
                     state: true,
                     replay: false
                 });
+                onvisible.add('#buttons01', {
+                    style: 'fade-left',
+                    speed: 1000,
+                    intensity: 5,
+                    delay: 0,
+                    state: true,
+                    replay: false
+                });
                 onvisible.add('#icons01', {
                     style: 'fade-left',
                     speed: 1000,
@@ -1824,6 +2825,50 @@
                     stagger: 125,
                     state: true,
                     replay: false
+                });
+                onvisible.add('#text03', {
+                    style: 'fade-left',
+                    speed: 1000,
+                    intensity: 2,
+                    delay: 0,
+                    staggerOrder: '',
+                    state: true,
+                    replay: false
+                });
+                onvisible.add('#text04', {
+                    style: 'fade-left',
+                    speed: 1000,
+                    intensity: 2,
+                    delay: 0,
+                    staggerOrder: '',
+                    state: true,
+                    replay: false
+                });
+                onvisible.add('#container02', {
+                    style: 'fade-left',
+                    speed: 1125,
+                    intensity: 5,
+                    delay: 0,
+                    staggerOrder: '',
+                    state: true,
+                    replay: false
+                });
+                onvisible.add('#buttons02', {
+                    style: 'fade-left',
+                    speed: 1000,
+                    intensity: 5,
+                    delay: 0,
+                    state: true,
+                    replay: false
+                });
+                onvisible.add('#text05', {
+                    style: 'zoom-in',
+                    speed: 1000,
+                    intensity: 2,
+                    delay: 0,
+                    staggerOrder: '',
+                    state: true,
+                    replay: true
                 });
             }
             )();
