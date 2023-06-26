@@ -39,6 +39,10 @@
             display: none;
             }
 
+            .show-content {
+            display: block;
+            }
+
             article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
                 display: block;
             }
@@ -1705,13 +1709,11 @@
             // Get the loading screen element
             var loadingScreen = document.getElementById('loading-screen');
 
-            // Hide the loading screen after the page content has loaded
-            function hideLoadingScreen() {
+            // Hide the loading screen after the GIF has finished playing
+            loadingScreen.addEventListener('animationend', function () {
                 loadingScreen.classList.add('hide');
-            }
-
-            // Add a delay for the loading screen to be visible
-            setTimeout(hideLoadingScreen, 2000); // Adjust the delay time (in milliseconds) as needed
+                document.body.classList.add('show-content');
+            });
         });
             (function() {
                 var on = addEventListener
