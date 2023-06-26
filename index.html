@@ -34,6 +34,10 @@
             height: 100%;
             background: url("https://cdn.dribbble.com/users/77121/screenshots/10205197/media/c5d367cd461b0fed5cd41995b6e86c10.gif") center no-repeat;
             }
+            
+            .hide {
+            display: none;
+            }
 
             article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
                 display: block;
@@ -1696,6 +1700,19 @@
             </div>
         </div>
         <script>
+        // Wait for the page to load
+        window.addEventListener('load', function () {
+            // Get the loading screen element
+            var loadingScreen = document.getElementById('loading-screen');
+
+            // Hide the loading screen after the page content has loaded
+            function hideLoadingScreen() {
+                loadingScreen.classList.add('hide');
+            }
+
+            // Add a delay for the loading screen to be visible
+            setTimeout(hideLoadingScreen, 2000); // Adjust the delay time (in milliseconds) as needed
+        });
             (function() {
                 var on = addEventListener
                   , off = removeEventListener
