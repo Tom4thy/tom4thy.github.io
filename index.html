@@ -1612,6 +1612,19 @@
                     filter: none !important;
                 }
             </style>
+        <script>
+            // Wait for the page to load
+            window.addEventListener('load', function () {
+            // Get the loading screen element
+            var loadingScreen = document.getElementById('loading-screen');
+        
+            // Hide the loading screen after the GIF has finished playing
+                loadingScreen.addEventListener('animationend', function () {
+                    loadingScreen.classList.add('hide');
+                    document.body.classList.add('show-content');
+                });
+            });
+            </script>
         </noscript>
     </head>
     <body class="is-loading">
@@ -1704,17 +1717,6 @@
             </div>
         </div>
         <script>
-        // Wait for the page to load
-        window.addEventListener('load', function () {
-            // Get the loading screen element
-            var loadingScreen = document.getElementById('loading-screen');
-
-            // Hide the loading screen after the GIF has finished playing
-            loadingScreen.addEventListener('animationend', function () {
-                loadingScreen.classList.add('hide');
-                document.body.classList.add('show-content');
-            });
-        });
             (function() {
                 var on = addEventListener
                   , off = removeEventListener
